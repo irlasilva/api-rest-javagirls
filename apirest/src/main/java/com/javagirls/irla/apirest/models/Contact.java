@@ -1,37 +1,57 @@
 package com.javagirls.irla.apirest.models;
 
+
+@Entity
 public class Contact {
+	@Id
+	@JsonIgnore
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
+	@NotBlank(message = "Campo nome é obrigatório")
 	private String name;
+	
+	@NotBlank(message = "Campo e-mail é obrigatório")
 	private String email;
+	
 	private String phone;
 	
+	public Contact () {}
 	
-	
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
+	public Contact(Long id, String name, String email, String phone) {
+		super();
 		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
 		this.name = name;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
 		this.email = email;
-	}
-	public String getPhone() {
-		return phone;
-	}
-	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 	
+	public Long getId() {
+		return id;		
+	}
+
+	public String getName() {
+		return name;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+	
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
+	public String getPhone() {
+		return phone;
+	}
+	
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
 	
 }
