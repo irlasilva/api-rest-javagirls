@@ -14,10 +14,10 @@ public class Contact {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@NotBlank(message = "Campo nome é obrigatório")
+	@NotBlank(message = "Campo Obrigat�rio!)
 	private String name;
 	
-	@NotBlank(message = "Campo e-mail é obrigatório")
+	@NotBlank(message = "Campo Obrigat�rio!")
 	private String email;
 	
 	private String phone;
